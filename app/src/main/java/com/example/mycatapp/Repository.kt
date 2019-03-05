@@ -13,7 +13,7 @@ open class Repository(
     isDebugEnabled: Boolean,
     apiKey: String
 ) {
-    private val apiKeyHeader: String = apiKey
+    private val apiKeyHeader: String = "x-api-key"
     protected val retrofit: Retrofit
 
     init {

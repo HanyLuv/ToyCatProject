@@ -11,7 +11,6 @@ class CatsRepository(
 
     private val catsDataSource: CatsDataSource = CatsDataSource(retrofit)
 
-    // a class to wrap around the response to make things easier later
     inner class Result(val netCats: List<NetCat>? = null, val errorMessage: String? = null) {
         fun hasCats(): Boolean {
             return netCats != null && !netCats.isEmpty()

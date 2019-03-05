@@ -11,7 +11,7 @@ class CatsDataSource(retrofit: Retrofit) {
     fun getNumberOfRandomCats(limit: Int, category_ids: Int?) = api.getNumberOfRandomCats(limit, category_ids)
 
     interface CatsApi {
-        @GET("image/search")
+        @GET("images/search")
         fun getNumberOfRandomCats(@Query("limit") limit: Int, @Query("category_ids") category_ids: Int?): Single<List<NetCat>>
     }
 }
